@@ -6,7 +6,7 @@ import History from "./History";
 import Admin from "./Admin"; 
 
 function App() {
-  const [page, setPage] = useState("login");
+  const [page, setPage] = useState("signup");
 
   const token = localStorage.getItem("token");
   const role = localStorage.getItem("role"); 
