@@ -38,3 +38,12 @@ dump/
 tmp/
 temp/
 .cache/
+
+
+# Uploads
+backend/uploads/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
