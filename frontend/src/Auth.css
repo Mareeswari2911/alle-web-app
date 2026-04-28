@@ -1,0 +1,120 @@
+/* BACKGROUND */
+.auth-container {
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb")
+    no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+/* DARK OVERLAY */
+.auth-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+/* WRAPPER */
+.auth-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-floating {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;   /* ✅ gives space between logo and card */
+  transform: translateY(-20px); /* optional slight upward move */
+}
+.main-logo {
+  width: 320px;
+  height: 240px;
+  object-fit: contain;
+  display: block;
+
+  /* glow */
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.6));
+
+  transition: transform 0.3s ease;
+}
+
+.main-logo:hover {
+  transform: scale(1.08);
+}
+
+/* SIGNUP BOX */
+.auth-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px 30px 30px 30px; /* space for logo */
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0px 8px 30px rgba(0,0,0,0.4);
+  color: white;
+}
+
+/* TITLE */
+.auth-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* INPUT */
+.auth-input {
+  width: 90%;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* PASSWORD */
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  cursor: pointer;
+}
+
+/* BUTTON */
+.auth-btn {
+  width: 80%;
+  padding: 12px;
+  background: linear-gradient(45deg, #7b2ff7, #f107a3);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.auth-btn:hover {
+  transform: scale(1.05);
+}
+
+/* LINK */
+.auth-link {
+  margin-top: 15px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
