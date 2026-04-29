@@ -62,9 +62,9 @@ function Admin({ setPage }) {
   const fetchAnalytics = useCallback(async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/admin/analytics/uploads",
+        `${process.env.REACT_APP_API_URL}/api/admin/analytics/uploads`,
         { headers: { Authorization: `Bearer ${token}` } }
-      );
+      )
       setAnalytics(res.data);
     } catch (err) {
       console.error("Error fetching analytics:", err);
