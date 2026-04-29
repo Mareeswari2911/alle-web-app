@@ -26,9 +26,9 @@ exports.enhanceImage = async (req, res) => {
     form.append("file", originalBuffer, req.file.originalname);
 
     const response = await axios.post(
-      "http://127.0.0.1:8000/api/enhance",
-      form,
-      { headers: form.getHeaders() }
+      `${process.env.FASTAPI_URL}/api/enhance`,
+        form,
+        { headers: form.getHeaders() }
     );
 
     const data = response.data;
