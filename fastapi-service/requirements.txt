@@ -6,3 +6,4 @@ torchvision
 numpy
 axios
 python-multipart
+opencv-python-headless
