@@ -10,8 +10,7 @@ function History({ setPage }) {
   useEffect(() => {
     if (!userId) return;
 
-    axios
-      .get(`http://localhost:5000/api/image/history/${userId}`)
+    axios.get(`${process.env.REACT_APP_API_URL}/api/image/history/${userId}`)
       .then((res) => setImages(res.data))
       .catch((err) => console.log(err));
   }, [userId]);

@@ -32,10 +32,8 @@ function Home({ setPage }) {
     try {
       setLoading(true);
 
-      const res = await axios.post(
-        "http://localhost:5000/api/enhance",
-        formData
-      );
+      const res =await axios.post(`${process.env.REACT_APP_API_URL}/api/enhance`, formData);
+      
 
       const data = res.data.image;
 
