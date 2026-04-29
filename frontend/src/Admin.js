@@ -64,7 +64,7 @@ function Admin({ setPage }) {
       const res = await axios.get(
         `${process.env.REACT_APP_API_URL}/api/admin/analytics/uploads`,
         { headers: { Authorization: `Bearer ${token}` } }
-      )
+      );
       setAnalytics(res.data);
     } catch (err) {
       console.error("Error fetching analytics:", err);
